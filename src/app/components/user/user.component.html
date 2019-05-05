@@ -1,5 +1,17 @@
-<h2>Name: {{user.firstName}}</h2>
-<h3>Age: {{user.age}}</h3>    
-    {{user.address.city}}
-    {{user.address.street}}
+<h1>Users</h1>
+<!-- <ul *ngIf="users.length > 0;else noUsers"> -->
+<ul *ngIf="loaded && users?.length > 0">
+    <li *ngFor="let user of users" >
+        <h2>Name: {{user.firstName}} {{user.lastName}}</h2>
+        <ul *ngIf="showExtended && user.age && user.address">
+            <li>Age: {{user.age}}</li>
+            <li>{{user.address.city}}</li>
+            <li>{{user.address.street}}</li>            
+        </ul>
+    </li>
+</ul>
 
+<!-- <ng-template #noUsers> No users found!!</ng-template> -->
+<h4 *ngIf="users?.length == 0"> No users found! </h4>
+
+<h4 *ngIf="!loaded"> Loding Users!! </h4>
