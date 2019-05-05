@@ -12,9 +12,9 @@ export class UserComponent implements OnInit{
     users: User[];
     showExtended: boolean = true;
     loaded: boolean = false;
+    enableAdd: boolean = true;
 
-    constructor(){
-        
+    constructor(){    
     }
     
     ngOnInit(): void {
@@ -62,4 +62,9 @@ export class UserComponent implements OnInit{
     addUser(user: User){
         this.users.push(user);
     }
+
+    fireEvent(e){
+        console.log('Event fired!!'+e);
+    }
+
 }
