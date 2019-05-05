@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-user',
@@ -6,25 +6,15 @@ import { Component } from '@angular/core';
     styleUrls:['./user.component.css']
 })
 
-export class UserComponent{
-    firstName: string = 'hasitha';
-    lastName = 'Madusanka';
-    age = 28;
-    address = {
-        street: '37/B Rahula road,',
-        city: 'Matara.' ,
+export class UserComponent implements OnInit{
+    
+    ngOnInit(): void {
+        alert('ngOnInit(): initalize the model objects');
     }
+    
 
     constructor(){
-        console.log('Hello '+ this.firstName);
-        this.sayHello();
+        alert('constructor(): inject dependency injection (call apis)')
     }     
 
-    sayHello(){            //this is ES6 (string concatenation)     
-        console.log(`Hello ${this.firstName}!! How are you!`);
-    }
-
-    showAge(){
-        return this.age;
-    }
 }
