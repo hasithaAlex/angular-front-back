@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from "../../models/User";
 
 @Component({
     selector: 'app-user',
@@ -7,24 +8,18 @@ import { Component } from '@angular/core';
 })
 
 export class UserComponent{
-    firstName: string = 'hasitha';
-    lastName = 'Madusanka';
-    age = 28;
-    address = {
-        street: '37/B Rahula road,',
-        city: 'Matara.' ,
-    }
+    user: User;
 
     constructor(){
-        console.log('Hello '+ this.firstName);
-        this.sayHello();
+        this.user = {
+            firstName : 'Haitha',
+            lastName : 'Madusanka',
+            age: 28,
+            address: {
+                city: 'Matara',
+                street: '37/B Rahula road.'
+            }
+        }
     }     
 
-    sayHello(){            //this is ES6 (string concatenation)     
-        console.log(`Hello ${this.firstName}!! How are you!`);
-    }
-
-    showAge(){
-        return this.age;
-    }
 }
