@@ -27,7 +27,8 @@ export class UserComponent implements OnInit{
                     address: {
                         city: 'Matara',
                         street: '37/B Rahula road.'
-                    }
+                    },
+                    hide: true
                 },{
                     firstName : 'Haitha K',
                     lastName : 'Madusanka',
@@ -35,7 +36,8 @@ export class UserComponent implements OnInit{
                     address: {
                         city: 'Gall',
                         street: '37/B Rahula road.'
-                    }
+                    },
+                    hide: true
                 },{
                     firstName : 'Haitha M',
                     lastName : 'Madusanka',
@@ -43,7 +45,8 @@ export class UserComponent implements OnInit{
                     address: {
                         city: 'Colombo',
                         street: '37/B Rahula road.'
-                    }
+                    },
+                    hide: true
                 },
             ]
             this.loaded = true;

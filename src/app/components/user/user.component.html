@@ -13,7 +13,7 @@
 <ul class="list-unstyle" *ngIf="loaded && users?.length > 0">
     <li *ngFor="let user of users" class="card card-body mb-2">
         <h2>Name: {{user.firstName}} {{user.lastName}}</h2>
-        <ul *ngIf="showExtended && user.age && user.address">
+        <ul *ngIf="!user.hide && user.age && user.address">
             <li class="list-group-item">Age: {{user.age}}</li>
             <li class="list-group-item">{{user.address.city}}</li>
             <li class="list-group-item">{{user.address.street}}</li>            

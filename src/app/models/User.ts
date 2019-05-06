@@ -5,5 +5,6 @@ export interface User{
     address?:{
         street?: string,
         city?: string
-    }
+    },
+    hide?: boolean
 }
